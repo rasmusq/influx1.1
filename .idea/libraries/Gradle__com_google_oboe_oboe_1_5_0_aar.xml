@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.oboe:oboe:1.5.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c90085d0232a107943eacad53e618ef9/jetified-oboe-1.5.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2f6a1e59057ecdc47c6b0e818e2d9875/jetified-oboe-1.5.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2f6a1e59057ecdc47c6b0e818e2d9875/jetified-oboe-1.5.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2f6a1e59057ecdc47c6b0e818e2d9875/jetified-oboe-1.5.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
