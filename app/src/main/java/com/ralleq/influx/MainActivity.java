@@ -6,7 +6,6 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.Window;
 import android.view.WindowManager;
@@ -29,7 +28,6 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.i("HI", "GitHub test");
         super.onCreate(savedInstanceState);
         audioRouter = new AudioRouter(this, new AudioRunnable() {
             @Override
