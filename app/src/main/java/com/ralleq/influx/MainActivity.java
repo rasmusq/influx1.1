@@ -41,22 +41,25 @@ public class MainActivity extends Activity {
 
             }
         });
-        screenHandler = new ScreenHandler(this, new DrawRunnable() {
-            @Override
-            public void run(Canvas canvas) {
-                canvas.drawColor(Color.RED);
+        screenHandler = new ScreenHandler(this,
+            new DrawRunnable() {
+                @Override
+                public void run(Canvas canvas) {
+                    canvas.drawColor(Color.RED);
+                    touchHandler.drawTouchPointers(canvas);
+                }
+            }, new BoundsRunnable() {
+                @Override
+                public void run(float left, float top, float right, float bottom) {
+                    touchHandler.updateBounds(left, top, right, bottom);
+                }
+            }, new MotionRunnable() {
+                @Override
+                public void run(MotionEvent motionEvent) {
+                    touchHandler.translateMotionEvent(motionEvent);
+                }
             }
-        }, new BoundsRunnable() {
-            @Override
-            public void run(float left, float top, float right, float bottom) {
-
-            }
-        }, new MotionRunnable() {
-            @Override
-            public void run(MotionEvent motionEvent) {
-                touchHandler.translateMotionEvent(motionEvent);
-            }
-        });
+        );
         hideAllUI();
         setContentView(screenHandler.getSurfaceView());
     }

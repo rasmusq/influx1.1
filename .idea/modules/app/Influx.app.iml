@@ -36,7 +36,6 @@
     <output-test url="file://$MODULE_DIR$/../../../app/build/intermediates/javac/debugUnitTest/classes" />
     <exclude-output />
     <content url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2f6a1e59057ecdc47c6b0e818e2d9875/jetified-oboe-1.5.0/prefab/modules/oboe/include">
-      <sourceFolder url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2f6a1e59057ecdc47c6b0e818e2d9875/jetified-oboe-1.5.0/prefab/modules/oboe/include" isTestSource="false" />
       <sourceFolder url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2f6a1e59057ecdc47c6b0e818e2d9875/jetified-oboe-1.5.0/prefab/modules/oboe/include" />
     </content>
     <content url="file://$MODULE_DIR$/../../../app">
@@ -47,7 +46,6 @@
       <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/source/buildConfig/debug" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../app/src/main/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/res/resValues/debug" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/../../../app/src/main/cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../../app/src/main/cpp" />
       <excludeFolder url="file://$MODULE_DIR$/../../../app/.cxx" />
       <excludeFolder url="file://$MODULE_DIR$/../../../app/.externalNativeBuild" />

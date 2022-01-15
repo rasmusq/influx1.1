@@ -1,6 +1,7 @@
 package com.ralleq.influx.touch;
 
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.view.MotionEvent;
 
@@ -17,13 +18,23 @@ public class TouchHandler {
 
     private Paint paint;
     private Random random;
-    private float paintStrokeWidth = ;
+    private float pointerRadius = 50;
     public void drawTouchPointers(Canvas canvas) {
 
         for(int i = 0; i < touchPointers.length; i++) {
             canvas.drawCircle(
-                    touchPointers[i].getPosition().getX(), touchPointers[i].getPosition().getY());
+                    touchPointers[i].getPosition().getX(), touchPointers[i].getPosition().getY(),
+                    pointerRadius, paint);
         }
+    }
+    public void updateBounds(float left, float top, float right, float bottom) {
+        pointerRadius = right / 20;
+        if(paint != null)
+            paint = new Paint();
+        paint.setStrokeWidth(right / 200);
+        paint.setColor(Color.BLACK);
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setAntiAlias(true);
     }
 
     public TouchHandler(TouchRunnable touchRunnable) {
