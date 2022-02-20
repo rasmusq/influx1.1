@@ -70,13 +70,13 @@ public class AudioRouter {
             @Override
             public void onAudioDevicesAdded(AudioDeviceInfo[] addedDevices) {
                 super.onAudioDevicesAdded(addedDevices);
-                restartNativeAudioEngine();
+                //restartNativeAudioEngine(); //TODO: Fix that it is not able to call start (inside restart) for the second time
             }
 
             @Override
             public void onAudioDevicesRemoved(AudioDeviceInfo[] removedDevices) {
                 super.onAudioDevicesRemoved(removedDevices);
-                restartNativeAudioEngine();
+                //restartNativeAudioEngine(); //TODO: Fix that it is not able to call start (inside restart) for the second time
             }
         }, null);
     }

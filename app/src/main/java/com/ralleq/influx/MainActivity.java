@@ -6,6 +6,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.Window;
 import android.view.WindowManager;
@@ -26,13 +27,21 @@ public class MainActivity extends Activity {
     private TouchHandler touchHandler;
     private ScreenHandler screenHandler;
 
+    double wavetime = 0.0;
+    double wavespeed = 0.0;
+    double time = 0.0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         audioRouter = new AudioRouter(this, new AudioRunnable() {
             @Override
             public void run(int[] leftInputSamples, int[] rightInputSamples, int[] leftOutputSamples, int[] rightOutputSamples, int currentSampleIndex) {
-
+                leftOutputSamples[currentSampleIndex] = (int) (Short.MAX_VALUE * Math.sin(wavetime));
+                rightOutputSamples[currentSampleIndex] = leftOutputSamples[currentSampleIndex];
+                wavetime += wavespeed/10;
+                wavespeed = Math.sin(time)*0.7 ;
+                time += 0.0001;
             }
         });
         touchHandler = new TouchHandler(new TouchRunnable() {

@@ -1,4 +1,6 @@
 #include <jni.h>
+#include <string.h>
+#include <stdlib.h>
 #include "AudioEngine.h"
 #include "oboe/Oboe.h"
 #include "android/log.h"
@@ -43,6 +45,7 @@ void AudioEngine::open() {
 }
 
 void AudioEngine::start() {
+    __android_log_print(ANDROID_LOG_VERBOSE, "AudioEngine", "Attempting to start AudioEngine");
     auto result = inputStream->requestStart();
     if(result != Result::OK) {
         __android_log_print(ANDROID_LOG_VERBOSE, "AudioEngine", "Error starting inputStream");
